@@ -551,3 +551,44 @@ footer {
     margin-right: auto;
   }
 }
+@media screen and (max-width: 414px) {
+  .navigation a {
+    display: none;
+  }
+  #search-text-input {
+    display: none;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 30px;
+  }
+  .images div {
+    max-width: 50%;
+    padding-left: 20px;
+  }
+  .top-designers div {
+    padding-left: 26px;
+  }
+  footer {
+    padding-left: 20px;
+    font-size: 12px;
+    margin: auto;
+  }
+  .button {
+    border: none;
+    border-radius: 12px;
+    background-color: #ff2288;
+    width: 60px;
+    height: 35px;
+    color: #ffffff;
+    font-family: "avenir_black";
+    font-size: 12px;
+  }
+  .chart {
+    font-size: 10px;
+  }
+}
