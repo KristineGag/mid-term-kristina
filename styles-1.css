@@ -152,7 +152,6 @@ header {
 .sidebar {
   background-color: #222222;
   position: fixed;
-  width: 319px;
   height: 100%;
   background-color: #222222;
   padding: 30px 30px 0px 30px;
@@ -214,15 +213,6 @@ header {
   z-index: 100;
 }
 
-.sidebar {
-  background-color: #222222;
-  position: fixed;
-  width: 319px;
-  height: 100%;
-  background-color: #222222;
-  padding: 30px 30px 0px 30px;
-  z-index: 1;
-}
 .navigation ul {
   padding-top: 20px;
 }
@@ -263,7 +253,7 @@ header {
 }
 
 .navigation ul {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .navigation li:hover {
   background-color: #ff2288;
@@ -280,23 +270,45 @@ header {
   margin: auto;
 }
 
-.navigation img {
-  width: 24px;
-}
 .following h3 {
-  margin-top: 30px;
+  margin-top: 39px;
   padding-bottom: 20px;
   color: #ffffff;
   font-family: "avenir_black";
   font-size: 12px;
 }
 
-.navigation a {
-  padding-left: 15px;
-  font-family: "avenir_roman";
-}
 .following p {
   padding-top: 19px;
+  font-family: "avenir_roman";
+}
+
+.following p > a {
+  padding-left: 0px;
+}
+
+.following li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.following img {
+  width: 44px;
+}
+
+.following a {
+  padding-left: 20px;
+  font-family: "avenir_roman";
+}
+
+.navigation img {
+  width: 24px;
+}
+
+.navigation a {
+  padding-left: 15px;
   font-family: "avenir_roman";
 }
 
@@ -306,45 +318,7 @@ header {
   background-color: #ff2288;
   border-radius: 12px;
 }
-.following p > a {
-  padding-left: 0px;
-}
 
-.following {
-  position: sticky;
-  top: 382px;
-  z-index: 100;
-}
-.following li {
-  display: flex;
-  align-items: center;
-  padding-bottom: 10px;
-  font-size: 16px;
-}
-
-.following h3 {
-  margin-top: 50px;
-  padding-bottom: 20px;
-  color: #ffffff;
-  font-family: "avenir_black";
-  font-size: 12px;
-}
-.following img {
-  width: 44px;
-}
-
-.following p {
-  padding-top: 19px;
-  font-family: "avenir_roman";
-}
-.following a {
-  padding-left: 20px;
-  font-family: "avenir_roman";
-}
-
-.following p > a {
-  padding-left: 0px;
-}
 table {
   width: 100%;
 }
@@ -508,9 +482,10 @@ footer {
       "sidebar footer";
   }
   .sidebar {
-    background-color: #222222;
     position: fixed;
     height: 100%;
+    background-color: #222222;
+    padding: 30px 30px 0px 30px;
     z-index: 1;
   }
   .following {
