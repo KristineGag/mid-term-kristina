@@ -443,4 +443,39 @@ footer {
   display: none;
 }
 @media screen and (max-width: 1024px) {
+  #search-text-input {
+    border: none;
+    border-radius: 12px;
+    height: 30px;
+    width: 300px;
+    background-color: #f8f8f8;
+    background-image: url(images/svg/Component\ 9\ –\ 2.svg);
+    background-position-x: 400px;
+    background-position-y: 15px;
+    background-repeat: no-repeat;
+    padding: 15px;
+  }
+  .following {
+    display: none;
+  }
+  .logo img {
+    display: none;
+  }
+  .navigation {
+    z-index: 100;
+    max-width: 15%;
+  }
+  .navigation li {
+    display: flex;
+    align-items: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .navigation img {
+    width: 15px;
+  }
+  .navigation a {
+    padding-left: 5px;
+  }
 }
