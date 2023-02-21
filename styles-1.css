@@ -6,12 +6,18 @@
 @font-face {
   font-family: "avenir_book";
   src: url(fonts/avenirltstd-book-webfont.woff) format("woff");
+  font-family: "avenir_book";
+  src: url(fonts/avenirltstd-book-webfont.woff) format("woff");
 }
 @font-face {
   font-family: "avenir_black";
   src: url(fonts/avenirltstd-black-webfont.woff) format("woff");
+  font-family: "avenir_black";
+  src: url(fonts/avenirltstd-black-webfont.woff) format("woff");
 }
 @font-face {
+  font-family: "avenir_roman";
+  src: url(fonts/avenirltstd-roman-webfont.woff) format("woff");
   font-family: "avenir_roman";
   src: url(fonts/avenirltstd-roman-webfont.woff) format("woff");
 }
@@ -55,7 +61,10 @@ header {
   border-bottom: 1px solid #f2f2f2;
   padding-bottom: 40px;
 }
-
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
 #search-text-input {
   border: none;
   border-radius: 12px;
@@ -69,6 +78,9 @@ header {
   padding: 15px;
 }
 
+ul {
+  list-style: none;
+}
 .profile {
   display: flex;
   align-items: center;
@@ -76,8 +88,102 @@ header {
   flex-wrap: wrap;
 }
 
+.outline {
+  max-width: 1920px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar chart"
+    "sidebar footer";
+}
 .profile img {
   margin-right: 35px;
+}
+
+header {
+  grid-area: header;
+  max-width: 1600px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile p {
+  color: #ff2288;
+  margin-right: 35px;
+  font-family: "avenir_black";
+  font-size: 14px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 40px;
+}
+.button {
+  border: none;
+  border-radius: 12px;
+  background-color: #ff2288;
+  width: 129px;
+  height: 56px;
+  color: #ffffff;
+  font-family: "avenir_black";
+  font-size: 14px;
+}
+
+#search-text-input {
+  border: none;
+  border-radius: 12px;
+  height: 56px;
+  width: 446px;
+  background-color: #f8f8f8;
+  background-image: url(images/svg/Component\ 9\ –\ 2.svg);
+  background-position-x: 400px;
+  background-position-y: 15px;
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+.sidebar {
+  background-color: #222222;
+  position: fixed;
+  width: 319px;
+  height: 100%;
+  background-color: #222222;
+  padding: 30px 30px 0px 30px;
+  z-index: 1;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 30px;
+  max-width: 259px;
+  width: 80%;
+  /* margin: auto; */
+  z-index: 100;
+}
+
+.profile img {
+  margin-right: 35px;
+}
+.navigation {
+  z-index: 100;
+  width: 80%;
+  max-width: 259px;
 }
 
 .profile p {
@@ -85,6 +191,11 @@ header {
   margin-right: 35px;
   font-family: "avenir_black";
   font-size: 14px;
+}
+.person {
+  border: 1px solid #e7e7e7;
+  border-radius: 29px;
+  width: 35px;
 }
 
 .button {
@@ -97,14 +208,23 @@ header {
   font-family: "avenir_black";
   font-size: 14px;
 }
+.navigation {
+  position: sticky;
+  top: 62px;
+  z-index: 100;
+}
 
 .sidebar {
   background-color: #222222;
   position: fixed;
+  width: 319px;
   height: 100%;
   background-color: #222222;
   padding: 30px 30px 0px 30px;
   z-index: 1;
+}
+.navigation ul {
+  padding-top: 20px;
 }
 
 .logo {
@@ -113,18 +233,7 @@ header {
   justify-content: space-between;
   position: sticky;
   top: 30px;
-  max-width: 259px;
-  width: 80%;
-  /* margin: auto; */
   z-index: 100;
-}
-.navigation {
-  z-index: 100;
-  width: 80%;
-  max-width: 259px;
-}
-.navigation ul {
-  padding-top: 20px;
 }
 .navigation li {
   display: flex;
@@ -132,58 +241,6 @@ header {
   padding-bottom: 18px;
   padding-top: 18px;
   padding-left: 15px;
-}
-
-.navigation img {
-  width: 24px;
-}
-
-.navigation a {
-  padding-left: 15px;
-  font-family: "avenir_roman";
-}
-
-.navigation li:hover {
-  background-color: #ff2288;
-  border-radius: 12px;
-}
-
-.following {
-  max-width: 259px;
-  margin: auto;
-}
-
-.following h3 {
-  margin-top: 30px;
-  padding-bottom: 20px;
-  color: #ffffff;
-  font-family: "avenir_black";
-  font-size: 12px;
-}
-
-.following p {
-  padding-top: 19px;
-  font-family: "avenir_roman";
-}
-
-.following p > a {
-  padding-left: 0px;
-}
-
-.following li {
-  display: flex;
-  align-items: center;
-  padding-bottom: 10px;
-  font-size: 16px;
-}
-
-.following img {
-  width: 44px;
-}
-
-.following a {
-  padding-left: 20px;
-  font-family: "avenir_roman";
 }
 
 .person {
@@ -191,36 +248,41 @@ header {
   border-radius: 29px;
   width: 35px;
 }
-
-.navigation ul {
-  padding-top: 20px;
-}
-
-.navigation li {
-  display: flex;
-  align-items: left;
-  padding-bottom: 18px;
-  padding-top: 18px;
-  padding-left: 15px;
-}
 .navigation img {
   width: 24px;
+}
+
+.navigation {
+  position: sticky;
+  top: 62px;
+  z-index: 100;
 }
 .navigation a {
   padding-left: 15px;
   font-family: "avenir_roman";
 }
 
+.navigation ul {
+  padding-top: 50px;
+}
 .navigation li:hover {
   background-color: #ff2288;
   border-radius: 12px;
 }
 
+.navigation li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 19px;
+}
 .following {
   max-width: 259px;
   margin: auto;
 }
 
+.navigation img {
+  width: 24px;
+}
 .following h3 {
   margin-top: 30px;
   padding-bottom: 20px;
@@ -229,15 +291,30 @@ header {
   font-size: 12px;
 }
 
+.navigation a {
+  padding-left: 15px;
+  font-family: "avenir_roman";
+}
 .following p {
   padding-top: 19px;
   font-family: "avenir_roman";
 }
 
+.navigation li:hover {
+  width: auto;
+  height: auto;
+  background-color: #ff2288;
+  border-radius: 12px;
+}
 .following p > a {
   padding-left: 0px;
 }
 
+.following {
+  position: sticky;
+  top: 382px;
+  z-index: 100;
+}
 .following li {
   display: flex;
   align-items: center;
@@ -245,17 +322,73 @@ header {
   font-size: 16px;
 }
 
+.following h3 {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-family: "avenir_black";
+  font-size: 12px;
+}
 .following img {
   width: 44px;
+}
+
+.following p {
+  padding-top: 19px;
+  font-family: "avenir_roman";
+}
+.following a {
+  padding-left: 20px;
+  font-family: "avenir_roman";
+}
+
+.following p > a {
+  padding-left: 0px;
+}
+table {
+  width: 100%;
+}
+
+.following li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.chart {
+  grid-area: chart;
+  max-width: 1231px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 130px;
+}
+
+.following img {
+  width: 44px;
+}
+.chart td,
+th {
+  text-align: left;
+  padding-bottom: 17px;
+  padding-top: 17px;
 }
 
 .following a {
   padding-left: 20px;
   font-family: "avenir_roman";
 }
+.chart td {
+  border-top: 1px solid #f8f8f8;
+  color: #afafaf;
+  font-size: 16px;
+}
 
 table {
   width: 100%;
+}
+tr:not(:first-child):hover {
+  background-color: #f2f2f2;
 }
 
 .chart {
@@ -267,6 +400,13 @@ table {
   margin-top: 40px;
   margin-bottom: 130px;
 }
+footer {
+  grid-area: footer;
+  max-width: 1231px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .chart td,
 th {
@@ -274,15 +414,26 @@ th {
   padding-bottom: 17px;
   padding-top: 17px;
 }
+.top {
+  display: flex;
+  justify-content: space-between;
+}
 
 .chart td {
   border-top: 1px solid #f8f8f8;
   color: #afafaf;
   font-size: 16px;
 }
+.top h4 {
+  margin-bottom: 36px;
+  font-family: "avenir_book";
+}
 
 tr:not(:first-child):hover {
   background-color: #f2f2f2;
+}
+.top li {
+  padding-bottom: 20px;
 }
 
 footer {
@@ -292,30 +443,23 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+.top a {
+  color: #222222;
+  font-family: "avenir_book";
+}
 
 .top {
   display: flex;
   justify-content: space-between;
+}
+.social img {
+  padding-right: 20px;
 }
 
 .top h4 {
   margin-bottom: 36px;
   font-family: "avenir_book";
 }
-
-.top li {
-  padding-bottom: 20px;
-}
-
-.top a {
-  color: #222222;
-  font-family: "avenir_book";
-}
-
-.social img {
-  padding-right: 20px;
-}
-
 .bottom {
   display: flex;
   align-items: center;
@@ -324,6 +468,17 @@ footer {
   margin-bottom: 40px;
 }
 
+.top li {
+  padding-bottom: 20px;
+}
+.additional {
+  display: none;
+}
+
+.top a {
+  color: #222222;
+  font-family: "avenir_book";
+}
 .additional {
   display: none;
 }
@@ -410,7 +565,19 @@ footer {
     padding: 15px;
   }
 }
+
+.social img {
+  padding-right: 20px;
+}
 @media screen and (max-width: 830px) {
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 153px;
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 360px) {
 }
