@@ -101,7 +101,6 @@ header {
 .sidebar {
   background-color: #222222;
   position: fixed;
-  width: 319px;
   height: 100%;
   background-color: #222222;
   padding: 30px 30px 0px 30px;
@@ -124,16 +123,73 @@ header {
   width: 80%;
   max-width: 259px;
 }
+.navigation ul {
+  padding-top: 20px;
+}
+.navigation li {
+  display: flex;
+  align-items: left;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  padding-left: 15px;
+}
+
+.navigation img {
+  width: 24px;
+}
+
+.navigation a {
+  padding-left: 15px;
+  font-family: "avenir_roman";
+}
+
+.navigation li:hover {
+  background-color: #ff2288;
+  border-radius: 12px;
+}
+
+.following {
+  max-width: 259px;
+  margin: auto;
+}
+
+.following h3 {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-family: "avenir_black";
+  font-size: 12px;
+}
+
+.following p {
+  padding-top: 19px;
+  font-family: "avenir_roman";
+}
+
+.following p > a {
+  padding-left: 0px;
+}
+
+.following li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.following img {
+  width: 44px;
+}
+
+.following a {
+  padding-left: 20px;
+  font-family: "avenir_roman";
+}
+
 .person {
   border: 1px solid #e7e7e7;
   border-radius: 29px;
   width: 35px;
-}
-
-.navigation {
-  position: sticky;
-  top: 62px;
-  z-index: 100;
 }
 
 .navigation ul {

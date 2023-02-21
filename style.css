@@ -118,17 +118,14 @@ header {
   /* margin: auto; */
   z-index: 100;
 }
-
 .navigation {
   z-index: 100;
   width: 80%;
   max-width: 259px;
 }
-
 .navigation ul {
   padding-top: 20px;
 }
-
 .navigation li {
   display: flex;
   align-items: left;
